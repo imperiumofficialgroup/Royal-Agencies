@@ -1,0 +1,348 @@
+/* Global Reset and Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f5f5f5; /* Light gray background for a soft look */
+    color: #333; /* Darker text color */
+    line-height: 1.6;
+}
+
+/* Header Section */
+.header {
+    background-color: #0c2d4f; /* Dark gray header */
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.header img {
+    max-width: 150px; /* Adjust logo size */
+    margin-bottom: 10px;
+}
+
+/* Navbar Styling */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #22476c; /* Dark gray background */
+    padding: 10px 0; /* Padding for navbar */
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space between menu items */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+}
+
+/* Main Content */
+.content {
+    padding: 20px; /* Padding around content */
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Banner Styling */
+.banner {
+    background-color: #22476c; /* Medium gray for banner */
+    padding: 40px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Banner Styling */
+.banner h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #ffffff; /* Set color to white */
+}
+
+.banner p {
+    font-size: 18px;
+}
+
+/* Service Section */
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+    gap: 15px;
+    justify-items: center;
+    padding: 20px;
+}
+
+/* Service Card Styles */
+.service-card {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 230px;
+    height: 260px;
+    text-align: center;
+    position: relative;
+    opacity: 0; /* Initial state for animation */
+    transform: translateY(20px); /* Initial offset for animation */
+    animation: fadeInUp 0.6s forwards; /* Apply animation */
+}
+
+/* Image styling for shorter height */
+.service-card img {
+    max-width: 100%;
+    height: 100px;
+    border-radius: 5px;
+}
+
+/* Heading and text adjustments */
+.service-card h3 {
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.service-card p {
+    font-size: 13px;
+    color: #cccccc;
+    margin-top: 5px;
+}
+
+/* "Read More" Button Styling */
+.service-card .button {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 6px 15px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    bottom: 10px; /* Position at the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.service-card .button:hover {
+    background-color: #0056b3;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for cards on return to home tab */
+@media (prefers-reduced-motion: no-preference) {
+    .service-card {
+        animation: fadeInUp 0.6s ease-out forwards;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .service-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .service-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+.service-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.service-card h3 {
+    margin-top: 15px;
+    color: #ffffff; /* Keep headings white for contrast */
+}
+
+.service-card p {
+    color: #cccccc; /* Light gray for descriptions */
+}
+
+/* Hover and Animation Effects for Service Cards */
+.service-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.service-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Buttons */
+.button {
+    background-color: #007bff; /* Bright blue button */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Footer */
+.footer {
+    background-color: #343a40; /* Dark gray footer */
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .navbar a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .content {
+        padding: 20px 10px;
+    }
+
+    .service-list {
+        flex-direction: column; /* Stack cards on smaller screens */
+    }
+
+    .service-card {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+/* About Us Page Styles */
+body {
+    background-color: #f4f7fa; /* Light background for the About Us page */
+}
+
+/* Header Section */
+.header {
+    background-color: #1a2a40; /* Dark navy header */
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.header img {
+    max-width: 150px; /* Adjust logo size */
+    margin-bottom: 10px;
+}
+
+/* Navbar Styling for About Us */
+.navbar {
+    position: static; /* Remove fixed positioning */
+    display: flex;
+    justify-content: center;
+    background-color: #22476c; /* Consistent background color */
+    padding: 10px 0; /* Padding for navbar */
+    box-shadow: none; /* Remove shadow effect */
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+}
+
+/* Remove the scroll effect on navbar */
+
+/* Main Content */
+.content {
+    padding: 100px 20px 20px; /* Padding to avoid overlap with navbar */
+    max-width: 800px; /* Constrain content width for better readability */
+    margin: auto;
+    text-align: left; /* Align text to the left */
+}
+
+/* About Us Specific Styling */
+h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #1a2a40; /* Darker color for headings */
+    border-bottom: 2px solid #007bff; /* Underline effect */
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: 28px;
+    margin-top: 30px;
+    color: #1a2a40; /* Dark color for subheadings */
+}
+
+p {
+    margin-bottom: 15px; /* Space between paragraphs */
+    line-height: 1.6; /* Improve readability */
+}
+
+ul {
+    list-style-type: disc; /* Standard bullet points */
+    margin-left: 20px; /* Indent list */
+    margin-bottom: 20px; /* Space below list */
+}
+
+/* Footer */
+.footer {
+    background-color: #1a2a40; /* Dark footer */
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+    

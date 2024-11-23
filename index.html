@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Royal Agencies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <img src="path/to/logo.png" alt="Royal Agencies Logo"> <!-- Add your logo here -->
+        <h1>Royal Agencies</h1>
+    </div>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <main class="content">
+        <section class="banner">
+            <h2>Welcome to Royal Agencies</h2>
+            <p>Your one-stop solution for water filters, CCTV & fire safety, rent agreements, insurance, and real estate services.</p>
+        </section>
+
+        <section class="services">
+            <h2>Our Services</h2>
+            <div class="service-list">
+                <div class="service-card">
+                    <img src="water.jpg" alt="Water Filters"> <!-- Add your service image here -->
+                    <h3>Water Filters</h3>
+                    <p>Overview of domestic and industrial water filter services.</p>
+                    <a href="water-filters.html" class="button">Read More</a>
+                </div>
+                <div class="service-card">
+                    <img src="CCTV.jpg" alt="CCTV & Fire Safety">
+                    <h3>CCTV & Fire Safety</h3>
+                    <p>Complete surveillance and fire safety solutions for your protection.</p>
+                    <a href="cctv-fire-safety.html" class="button">Read More</a>
+                </div>
+                <div class="service-card">
+                    <img src="Rent.jpg" alt="Rent Agreements">
+                    <h3>Rent Agreement Services</h3>
+                    <p>Legal and transparent rent agreements for renters and owners.</p>
+                    <a href="rent-agreements.html" class="button">Read More</a>
+                </div>
+                <div class="service-card">
+                    <img src="health.jpg" alt="Health Insurance">
+                    <h3>Star Health Insurance</h3>
+                    <p>Secure health insurance plans with extensive coverage options.</p>
+                    <a href="health-insurance.html" class="button">Read More</a>
+                </div>
+                <div class="service-card">
+                    <img src="Vehicle.jpg" alt="Vehicle Insurance">
+                    <h3>Vehicle Insurance</h3>
+                    <p>Comprehensive insurance for domestic and commercial vehicles.</p>
+                    <a href="vehicle-insurance.html" class="button">Read More</a>
+                </div>
+                <div class="service-card">
+                    <img src="Real.jpg" alt="Real Estate">
+                    <h3>Real Estate</h3>
+                    <p>Buying, selling, and renting properties in key locations.</p>
+                    <a href="real-estate.html" class="button">Read More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Royal Agencies. All rights reserved.</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.querySelector('.navbar');
+            const serviceCards = document.querySelectorAll('.service-card');
+
+            // Slide-in effect for service cards
+            function showServiceCards() {
+                const scrollY = window.scrollY;
+                serviceCards.forEach((card, index) => {
+                    const offsetTop = card.offsetTop;
+                    if (scrollY + window.innerHeight > offsetTop + 50) {
+                        setTimeout(() => {
+                            card.classList.add('visible');
+                        }, index * 100); // Delay for each card
+                    }
+                });
+            }
+
+            // Initial and on-scroll call to show service cards
+            window.addEventListener('scroll', showServiceCards);
+            showServiceCards(); // Initial load check
+        });
+    </script>
+</body>
+</html>
