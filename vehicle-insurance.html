@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Agreement | Royal Agencies</title>
+    <link rel="stylesheet" href="vehicle-insurance.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    
+    <!-- Banner Section -->
+    <section id="banner">
+        <div class="banner-content">
+            <h1>Royal Agencies</h1>
+            <p>Expert Solutions in Water Filters, CCTV, Fire Safety, Insurance, Real Estate, and More</p>
+        </div>
+    </section>
+
+    <!-- Vehicle Insurance Section -->
+    <section class="insurance-section">
+        <h2>Domestic & Commercial Vehicle Insurance</h2>
+        <p>Find the best insurance for domestic and commercial vehicles. Our trusted partners provide comprehensive coverage tailored to your needs.</p>
+
+        <!-- Insurance Company Logos -->
+        <div class="insurance-logos">
+            <img src="images/insurance-logo1.png" alt="Insurance Company 1">
+            <img src="images/insurance-logo2.png" alt="Insurance Company 2">
+            <!-- Add more logos as needed -->
+        </div>
+
+        <!-- Policies List -->
+        <div class="policy-list">
+            <!-- Policy Card 1 -->
+            <div class="policy-card" onclick="openModal('policy1')">
+                <h3>Domestic Car Insurance</h3>
+                <p>Comprehensive coverage for private cars with optional add-ons and benefits.</p>
+            </div>
+            
+            <!-- Policy Card 2 -->
+            <div class="policy-card" onclick="openModal('policy2')">
+                <h3>Commercial Vehicle Insurance</h3>
+                <p>Flexible insurance options for a range of commercial vehicles.</p>
+            </div>
+            
+            <!-- Policy Card 3 -->
+            <div class="policy-card" onclick="openModal('policy3')">
+                <h3>Two-Wheeler Insurance</h3>
+                <p>Exclusive plans for motorcycles and scooters with comprehensive coverage.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals for Policy Details -->
+    <div id="policy1-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('policy1')">&times;</span>
+            <h2>Domestic Car Insurance</h2>
+            <p>This policy covers damage, theft, and third-party liabilities for private cars. Optional add-ons include zero depreciation, engine protection, and more.</p>
+            <button onclick="window.location.href='https://www.insurance-partner.com/domestic-car'">Learn More</button>
+        </div>
+    </div>
+
+    <div id="policy2-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('policy2')">&times;</span>
+            <h2>Commercial Vehicle Insurance</h2>
+            <p>Get coverage for commercial vehicles, including taxis, buses, and goods carriers. Comprehensive policies protect against damage, theft, and legal liabilities.</p>
+            <button onclick="window.location.href='https://www.insurance-partner.com/commercial-vehicle'">Learn More</button>
+        </div>
+    </div>
+
+    <div id="policy3-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('policy3')">&times;</span>
+            <h2>Two-Wheeler Insurance</h2>
+            <p>This policy covers motorcycles and scooters, offering protection against accidents, theft, and third-party claims.</p>
+            <button onclick="window.location.href='https://www.insurance-partner.com/two-wheeler'">Learn More</button>
+        </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form">
+        <h2>Contact Us for a Customized Quote</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <script src="vehicle-insurance.js"></script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Royal Agencies. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Filters | Royal Agencies</title>
+    <link rel="stylesheet" href="water-filters.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    
+    <!-- Banner Section -->
+    <section id="banner">
+        <div class="banner-content">
+            <h1>Royal Agencies</h1>
+            <p>Expert Solutions in Water Filters, CCTV, Fire Safety, Insurance, Real Estate, and More</p>
+        </div>
+    </section>
+
+    <!-- Filter and Products Section -->
+    <section id="products-section">
+        <!-- Filter Options -->
+        <div class="filter-container">
+            <label for="filter-type">Filter by Type:</label>
+            <select id="filter-type" onchange="filterProducts()">
+                <option value="all">All</option>
+                <option value="commercial">Commercial</option>
+                <option value="industrial">Industrial</option>
+            </select>
+        </div>
+
+        <!-- Product Cards -->
+        <div class="product-grid">
+            <!-- Sample Product Card Structure -->
+            <div class="product-card" data-type="commercial">
+                <img src="path/to/commercial-filter1.jpg" alt="Commercial Filter">
+                <p>Commercial Filter 1 - High Efficiency</p>
+                <button onclick="window.location.href='product-details.html'">Read More</button>
+            </div>
+            <div class="product-card" data-type="commercial">
+                <img src="path/to/commercial-filter2.jpg" alt="Commercial Filter">
+                <p>Commercial Filter 2 - Compact Design</p>
+                <button onclick="window.location.href='product-details.html'">Read More</button>
+            </div>
+            <div class="product-card" data-type="industrial">
+                <img src="path/to/industrial-filter1.jpg" alt="Industrial Filter">
+                <p>Industrial Filter 1 - 50 LPH</p>
+                <button onclick="window.location.href='product-details.html'">Read More</button>
+            </div>
+            <div class="product-card" data-type="industrial">
+                <img src="path/to/industrial-filter2.jpg" alt="Industrial Filter">
+                <p>Industrial Filter 2 - 500 LPH</p>
+                <button onclick="window.location.href='product-details.html'">Read More</button>
+            </div>
+            <div class="product-card" data-type="commercial">
+                <img src="path/to/commercial-filter1.jpg" alt="Commercial Filter">
+                <p>Commercial Filter 1 - High Efficiency</p>
+                <button onclick="window.location.href='product-details.html'">Read More</button>
+            </div>
+            <div class="product-card" data-type="commercial">
+                <img src="path/to/commercial-filter2.jpg" alt="Commercial Filter">
+                <p>Commercial Filter 2 - Compact Design</p>
+                <button onclick="window.location.href='product-details.html'">Read More</button>
+            </div>
+            <div class="product-card" data-type="industrial">
+                <img src="path/to/industrial-filter1.jpg" alt="Industrial Filter">
+                <p>Industrial Filter 1 - 50 LPH</p>
+                <button onclick="window.location.href='product-details.html'">Read More</button>
+            </div>
+            <div class="product-card" data-type="industrial">
+                <img src="path/to/industrial-filter2.jpg" alt="Industrial Filter">
+                <p>Industrial Filter 2 - 500 LPH</p>
+                <button onclick="window.location.href='product-details.html'">Read More</button>
+            </div>
+            <!-- Add additional cards in similar structure -->
+        </div>
+    </section>
+    
+    <script src="water-filters.js"></script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Royal Agencies. All rights reserved.</p>
+    </footer>
+</body>
+</html>

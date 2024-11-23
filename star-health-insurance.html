@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Health Insurance | Royal Agencies</title>
+    <link rel="stylesheet" href="star-health-insurance.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+    <!-- Banner -->
+    <section id="banner">
+        <h1>Royal Agencies</h1>
+        <p>Your health is our priority. Explore a wide range of insurance policies tailored to your needs.</p>
+        <button onclick="window.location.href='https://www.starhealth.in/health-insurance/'">View All Policies</button>
+    </section>
+
+    <!-- Slideshow for Services -->
+    <section id="slideshow">
+        <div class="slides-container">
+            <!-- Navigation Arrows -->
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+
+            <!-- Slides -->
+            <div class="slide" data-type="family">
+                <img src="family-health.jpg" alt="Family Health Insurance">
+                <h3>Family Health Insurance</h3>
+                <p>Comprehensive coverage for the entire family, including hospitalization, maternity, and more.</p>
+                <button onclick="window.location.href='https://www.starhealth.in/health-insurance/health-insurance-plans-for-family/'">Read More</button>
+            </div>
+            <div class="slide" data-type="individual">
+                <img src="individual-health.jpg" alt="Individual Health Insurance">
+                <h3>Individual Health Insurance</h3>
+                <p>Personalized health coverage for individuals with flexible premium options.</p>
+                <button onclick="window.location.href='https://www.starhealth.in/individual-health-insurance'">Read More</button>
+            </div>
+            <div class="slide" data-type="senior">
+                <img src="senior-health.jpg" alt="Senior Citizen Health Insurance">
+                <h3>Senior Citizen Health Insurance</h3>
+                <p>Specially designed for seniors with additional benefits and easy claim processes.</p>
+                <button onclick="window.location.href='https://www.starhealth.in/health-insurance/health-insurance-for-senior-citizens/'">Read More</button>
+            </div>
+            <div class="slide" data-type="critical">
+                <img src="critical-illness-cover.jpg" alt="Critical Illness Cover Insurance">
+                <h3>Critical Illness Cover</h3>
+                <p>High coverage for critical illnesses with lump sum benefits to aid in recovery.</p>
+                <button onclick="window.location.href='https://www.starhealth.in/health-insurance/critical-illness-insurance/'">Read More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dropdown Menu for Selecting Slides -->
+    <div class="dropdown-container">
+        <label for="slide-select">Choose a Policy to View:</label>
+        <select id="slide-select" onchange="selectSlide()">
+            <option value="0">Family Health Insurance</option>
+            <option value="1">Individual Health Insurance</option>
+            <option value="2">Senior Citizen Health Insurance</option>
+            <option value="3">Critical Illness Cover</option>
+        </select>
+    </div>
+
+    <script src="star-health-insurance.js"></script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Royal Agencies. All rights reserved.</p>
+    </footer>
+</body>
+</html>

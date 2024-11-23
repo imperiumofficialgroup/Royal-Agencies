@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCTV Products | Royal Agencies</title>
+    <link rel="stylesheet" href="cctv-fire-safety.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    
+    <!-- Banner Section -->
+    <section id="banner">
+        <div class="banner-content">
+            <h1>Royal Agencies</h1>
+            <p>Expert Solutions in Water Filters, CCTV, Fire Safety, Insurance, Real Estate, and More</p>
+        </div>
+    </section>
+
+    <!-- Filter and Products Section -->
+    <section id="products-section">
+        <!-- Filter Options -->
+        <div class="filter-container">
+            <label for="filter-type">Filter by Brand:</label>
+            <select id="filter-type" onchange="filterProducts()">
+                <option value="all">All</option>
+                <option value="hikvision">Hikvision</option>
+                <option value="cp-plus">CP Plus</option>
+                <option value="dahua">Dahua</option>
+                <option value="d-link">D-Link</option>
+            </select>
+        </div>
+
+        <!-- Product Cards -->
+        <div class="product-grid">
+            <!-- Product Card Structure for Different Brands -->
+            <div class="product-card" data-type="hikvision">
+                <img src="path/to/hikvision-product1.jpg" alt="Hikvision Product">
+                <p>Hikvision CCTV Camera - Model 1</p>
+                <button onclick="window.location.href='product-details.html'">Read More</button>
+            </div>
+            <div class="product-card" data-type="hikvision">
+                <img src="path/to/hikvision-product2.jpg" alt="Hikvision Product">
+                <p>Hikvision CCTV Camera - Model 2</p>
+                <button onclick="window.location.href='product-details.html'">Read More</button>
+            </div>
+            <div class="product-card" data-type="cp-plus">
+                <img src="path/to/cp-plus-product1.jpg" alt="CP Plus Product">
+                <p>CP Plus CCTV Camera - Model 1</p>
+                <button onclick="window.location.href='product-details.html'">Read More</button>
+            </div>
+            <div class="product-card" data-type="cp-plus">
+                <img src="path/to/cp-plus-product2.jpg" alt="CP Plus Product">
+                <p>CP Plus CCTV Camera - Model 2</p>
+                <button onclick="window.location.href='product-details.html'">Read More</button>
+            </div>
+            <div class="product-card" data-type="dahua">
+                <img src="path/to/dahua-product1.jpg" alt="Dahua Product">
+                <p>Dahua CCTV Camera - Model 1</p>
+                <button onclick="window.location.href='product-details.html'">Read More</button>
+            </div>
+            <div class="product-card" data-type="dahua">
+                <img src="path/to/dahua-product2.jpg" alt="Dahua Product">
+                <p>Dahua CCTV Camera - Model 2</p>
+                <button onclick="window.location.href='product-details.html'">Read More</button>
+            </div>
+            <div class="product-card" data-type="d-link">
+                <img src="path/to/d-link-product1.jpg" alt="D-Link Product">
+                <p>D-Link CCTV Camera - Model 1</p>
+                <button onclick="window.location.href='product-details.html'">Read More</button>
+            </div>
+            <div class="product-card" data-type="d-link">
+                <img src="path/to/d-link-product2.jpg" alt="D-Link Product">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/IekrG_eKZmQ?si=6nQOM3ao38IJa2m1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>D-Link CCTV Camera - Model 2</p>
+                <button onclick="window.location.href='product-details.html'">Read More</button>
+            </div>
+        </div>
+    </section>
+    
+    <script src="cctv-fire-safety.js"></script>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Royal Agencies. All rights reserved.</p>
+    </footer>
+</body>
+</html>
