@@ -1,0 +1,79 @@
+/* Banner */
+#banner {
+    background-image: url('img.jpg'); /* Replace with a banner image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Navigation */
+nav {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Products Section */
+#products-section {
+    padding: 20px;
+    text-align: center;
+}
+
+.filter-info {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.filter-info img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.filter-info h3 {
+    margin: 15px 0;
+    font-size: 1.5em;
+}
+
+.filter-info h4 {
+    text-align: left; /* Align Features heading to the left */
+    margin: 15px 0 5px 0;
+    font-size: 1.3em;
+    color: #333; /* Optional: Add color for distinction */
+}
+
+.filter-info p {
+    text-align: left; /* Align paragraph text to the left */
+    margin: 10px 0;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.filter-info ul {
+    text-align: left; /* Align bullet points to the left */
+    margin: 10px 0 10px 20px; /* Add some spacing for better readability */
+    padding: 0;
+    list-style-type: disc; /* Use standard bullet points */
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555; /* Optional: Color for bullet text */
+}
+
+.filter-info li {
+    margin-bottom: 8px; /* Add spacing between list items */
+}

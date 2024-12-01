@@ -1,0 +1,136 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+}
+
+/* Filter Info Container */
+.filter-info {
+    max-width: 100%;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Title Styling */
+.filter-info h3 {
+    text-align: left;
+    color: #0078D7;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    padding-left: 100px;
+}
+
+/* Content Section */
+.content {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Image Styling */
+.content img {
+    flex: 1;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    width: 100%;
+    height: 500px;
+}
+
+/* Information Section */
+.info {
+    flex: 1.5;
+    padding: 10px;
+}
+
+/* Features Section */
+.features-section {
+    margin-top: 20px;
+}
+
+.features-section h4 {
+    font-size: 1.8rem;
+    color: #444;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #0078D7;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.features-section ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.features-section ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Responsive Design */
+
+/* Tablet View (Min Width: 768px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .content {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .content img {
+        flex: 1;
+        max-width: 50%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .features-section ul li {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile View (Max Width: 767px) */
+@media (max-width: 767px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .content img {
+        width: 100%;
+        height: auto;
+    }
+
+    .features-section h4 {
+        text-align: center;
+    }
+
+    .features-section ul {
+        padding-left: 10px;
+    }
+
+    .features-section ul li {
+        font-size: 0.9rem;
+        text-align: left;
+    }
+}

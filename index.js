@@ -9,7 +9,7 @@ let thumbnailItemsDom = thumbnailBorderDom.querySelectorAll('.item');
 let timeDom = document.querySelector('.carousel .time');
 
 thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
-let timeRunning = 700;
+let timeRunning = 3000;
 let timeAutoNext = 7000;
 
 nextDom.onclick = function(){
@@ -47,3 +47,12 @@ function showSlider(type){
         next.click();
     }, timeAutoNext)
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const loader = document.getElementById("loader");
+
+    // Hide the loader once the page is fully loaded
+    window.addEventListener("load", function () {
+        loader.style.display = "none";
+    });
+});

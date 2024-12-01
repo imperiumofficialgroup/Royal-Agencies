@@ -4,73 +4,248 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Star Health Insurance | Royal Agencies</title>
-    <link rel="stylesheet" href="star-health-insurance.css">
+    <link rel="stylesheet" href="/css/star-health-insurance.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/whatsapp.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>  
 </head>
 <body>
+
+    <a href="https://wa.me/+919921913303" target="_blank" class="fixed-image">
+        <img src="image/WhatsApp_icon.png" alt="Redirect Image">
+      </a>
+
     <!-- Navbar -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact Us</a>
-    </nav>
+    <header class="header">
+		<div class="container">
+			<a href="index.html" class="logo">Royal Agencies</a>
+			<input class="menu-btn" type="checkbox" id="menu-btn">
+			<label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+			<ul class="menu">
+				<li><a href="index.html" class="active">Home</a></li>
+				<li><a href="about-us.html">About Us</a></li>
+				<li><a href="contact.html">Contact us</a></li>
+			</ul>
+		</div>
+	</header>
+    <br><br><br><br><br>
 
-    <!-- Banner -->
-    <section id="banner">
-        <h1>Royal Agencies</h1>
-        <p>Your health is our priority. Explore a wide range of insurance policies tailored to your needs.</p>
-        <button onclick="window.location.href='https://www.starhealth.in/health-insurance/'">View All Policies</button>
-    </section>
+    <!-- Filter Container -->
+    <div class="filter-container">
+        <label for="policy-type">Filter by Policy Type:</label>
+        <select id="policy-type" onchange="filterPolicies()">
+            <option value="all">All</option>
+            <option value="family">Family Health Insurance</option>
+            <option value="individual">Individual Health Insurance</option>
+            <option value="senior">Senior Citizen Health Insurance</option>
+            <option value="critical">Critical Illness Cover</option>
+        </select>
+        <div class="search-container">
+            <span class="search-icon">
+                <i class="fas fa-search"></i>
+            </span>
+            <input
+                id="searchKeyword"
+                type="text"
+                placeholder="Search by keyword"
+                class="search-input"
+                onkeyup="applyFilters()" />
+        </div>        
+    </div>
 
-    <!-- Slideshow for Services -->
-    <section id="slideshow">
-        <div class="slides-container">
-            <!-- Navigation Arrows -->
-            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-            <button class="next" onclick="changeSlide(1)">&#10095;</button>
-
-            <!-- Slides -->
-            <div class="slide" data-type="family">
-                <img src="family-health.jpg" alt="Family Health Insurance">
+    <!-- Products Section -->
+    <section id="products-section">
+        <div class="product-grid">
+            <!-- Policy Card 1 -->
+            <div class="product-card" data-type="family">
+                <img src="image/family-health.png" alt="Family Health Insurance">
                 <h3>Family Health Insurance</h3>
                 <p>Comprehensive coverage for the entire family, including hospitalization, maternity, and more.</p>
-                <button onclick="window.location.href='https://www.starhealth.in/health-insurance/health-insurance-plans-for-family/'">Read More</button>
+                <div class="buttons">
+                <a href="pdf/Brochure Super Star Web.pdf" download><button>Learn More</button></a>
+                <a href="https://wa.me/+919921913303"><button>Enquire Now</button></a>
             </div>
-            <div class="slide" data-type="individual">
-                <img src="individual-health.jpg" alt="Individual Health Insurance">
+         </div>
+
+            <!-- Policy Card 2 -->
+            <div class="product-card" data-type="individual">
+                <img src="image/individual-health.png" alt="Individual Health Insurance">
                 <h3>Individual Health Insurance</h3>
-                <p>Personalized health coverage for individuals with flexible premium options.</p>
-                <button onclick="window.location.href='https://www.starhealth.in/individual-health-insurance'">Read More</button>
+                <p>Personalized health coverage for individuals with flexible premium options and comprehensive benefits.</p>
+                <div class="buttons">
+                    <a href="pdf/Brochure Super Star Web.pdf" download><button>Learn More</button></a>
+                    <a href="https://wa.me/+919921913303"><button>Enquire Now</button></a>
+                </div>
             </div>
-            <div class="slide" data-type="senior">
-                <img src="senior-health.jpg" alt="Senior Citizen Health Insurance">
+
+            <!-- Policy Card 3 -->
+            <div class="product-card" data-type="senior">
+                <img src="image/senior-health.png" alt="Senior Citizen Health Insurance">
                 <h3>Senior Citizen Health Insurance</h3>
                 <p>Specially designed for seniors with additional benefits and easy claim processes.</p>
-                <button onclick="window.location.href='https://www.starhealth.in/health-insurance/health-insurance-for-senior-citizens/'">Read More</button>
+                <div class="buttons">
+                    <a href="pdf/Brochure Super Star Web.pdf" download><button>Learn More</button></a>
+                    <a href="https://wa.me/+919921913303"><button>Enquire Now</button></a>
+                </div>
             </div>
-            <div class="slide" data-type="critical">
-                <img src="critical-illness-cover.jpg" alt="Critical Illness Cover Insurance">
+
+            <!-- Policy Card 4 -->
+            <div class="product-card" data-type="critical">
+                <img src="image/critical-illness-cover.png" alt="Critical Illness Cover Insurance">
                 <h3>Critical Illness Cover</h3>
-                <p>High coverage for critical illnesses with lump sum benefits to aid in recovery.</p>
-                <button onclick="window.location.href='https://www.starhealth.in/health-insurance/critical-illness-insurance/'">Read More</button>
+                <p>Comprehensive coverage for major critical illnesses with lump-sum benefits to support recovery.</p>
+                <div class="buttons">
+                    <a href="pdf/Brochure Super Star Web.pdf" download><button>Learn More</button></a>
+                    <a href="https://wa.me/+919921913303"><button>Enquire Now</button></a>
+                </div>
+            </div>
+            <!-- Policy Card 1 -->
+            <div class="product-card" data-type="family">
+                <img src="image/family-health.png" alt="Family Health Insurance">                
+                <h3>Family Health Insurance</h3>
+                <p>Comprehensive coverage for the entire family, including hospitalization, maternity, and more.</p>
+                <div class="buttons">
+                    <a href="pdf/Brochure Super Star Web.pdf" download><button>Learn More</button></a>
+                    <a href="https://wa.me/+919921913303"><button>Enquire Now</button></a>
+                </div>
+            </div>
+
+            <!-- Policy Card 2 -->
+            <div class="product-card" data-type="individual">
+                <img src="image/individual-health.png" alt="Individual Health Insurance">
+                <h3>Individual Health Insurance</h3>
+                <p>Personalized health coverage for individuals with flexible premium options and comprehensive benefits.</p>
+                <div class="buttons">
+                    <a href="pdf/Brochure Super Star Web.pdf" download><button>Learn More</button></a>
+                    <a href="https://wa.me/+919921913303"><button>Enquire Now</button></a>
+                </div>
+            </div>
+
+            <!-- Policy Card 3 -->
+            <div class="product-card" data-type="senior">
+                <img src="image/senior-health.png" alt="Senior Citizen Health Insurance">
+                <h3>Senior Citizen Health Insurance</h3>
+                <p>Specially designed for seniors with additional benefits and easy claim processes.</p>
+                <div class="buttons">
+                    <a href="pdf/Brochure Super Star Web.pdf" download><button>Learn More</button></a>
+                    <a href="https://wa.me/+919921913303"><button>Enquire Now</button></a>
+                </div>  
+            </div>
+
+            <!-- Policy Card 4 -->
+            <div class="product-card" data-type="critical">
+                <img src="image/critical-illness-cover.png" alt="Critical Illness Cover Insurance">
+                <h3>Critical Illness Cover</h3>
+                <p>Comprehensive coverage for major critical illnesses with lump-sum benefits to support recovery.</p>
+                <div class="buttons">
+                    <a href="pdf/Brochure Super Star Web.pdf" download><button>Learn More</button></a>
+                    <a href="https://wa.me/+919921913303"><button>Enquire Now</button></a>
+                </div>        
+            </div>
+            <!-- Policy Card 1 -->
+            <div class="product-card" data-type="family">
+                <img src="image/family-health.png" alt="Family Health Insurance">
+                <h3>Family Health Insurance</h3>
+                <p>Comprehensive coverage for the entire family, including hospitalization, maternity, and more.</p>
+                <div class="buttons">
+                    <a href="pdf/Brochure Super Star Web.pdf" download><button>Learn More</button></a>
+                    <a href="https://wa.me/+919921913303"><button>Enquire Now</button></a>
+                </div>        
+            </div>
+
+            <!-- Policy Card 2 -->
+            <div class="product-card" data-type="individual">
+                <img src="image/individual-health.png" alt="Individual Health Insurance">
+                <h3>Individual Health Insurance</h3>
+                <p>Personalized health coverage for individuals with flexible premium options and comprehensive benefits.</p>
+                <div class="buttons">
+                    <a href="pdf/Brochure Super Star Web.pdf" download><button>Learn More</button></a>
+                    <a href="https://wa.me/+919921913303"><button>Enquire Now</button></a>
+                </div>     
+            </div>
+
+            <!-- Policy Card 3 -->
+            <div class="product-card" data-type="senior">
+                <img src="image/senior-health.png" alt="Senior Citizen Health Insurance">
+                <h3>Senior Citizen Health Insurance</h3>
+                <p>Specially designed for seniors with additional benefits and easy claim processes.</p>
+                <div class="buttons">
+                    <a href="pdf/Brochure Super Star Web.pdf" download><button>Learn More</button></a>
+                    <a href="https://wa.me/+919921913303"><button>Enquire Now</button></a>
+                </div>
+            </div>
+
+            <!-- Policy Card 4 -->
+            <div class="product-card" data-type="critical">
+                <img src="image/critical-illness-cover.png" alt="Critical Illness Cover Insurance">
+                <h3>Critical Illness Cover</h3>
+                <p>Comprehensive coverage for major critical illnesses with lump-sum benefits to support recovery.</p>
+                <div class="buttons">
+                    <a href="pdf/Brochure Super Star Web.pdf" download><button>Learn More</button></a>
+                    <a href="https://wa.me/+919921913303"><button>Enquire Now</button></a>
+                </div>  
             </div>
         </div>
     </section>
 
-    <!-- Dropdown Menu for Selecting Slides -->
-    <div class="dropdown-container">
-        <label for="slide-select">Choose a Policy to View:</label>
-        <select id="slide-select" onchange="selectSlide()">
-            <option value="0">Family Health Insurance</option>
-            <option value="1">Individual Health Insurance</option>
-            <option value="2">Senior Citizen Health Insurance</option>
-            <option value="3">Critical Illness Cover</option>
-        </select>
-    </div>
-
-    <script src="star-health-insurance.js"></script>
     <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Royal Agencies. All rights reserved.</p>
-    </footer>
+    <div class="footer">
+        <div class="container">     
+            <div class="row">                       
+                <div class="col-lg-4 col-sm-4 col-xs-12">
+                    <div class="single_footer">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#">Lorem Ipsum</a></li>
+                            <li><a href="#">Simply dummy text</a></li>
+                            <li><a href="#">The printing and typesetting </a></li>
+                            <li><a href="#">Standard dummy text</a></li>
+                            <li><a href="#">Type specimen book</a></li>
+                        </ul>
+                    </div>
+                </div><!--- END COL --> 
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="single_footer single_footer_address">
+                        <h4>Page Link</h4>
+                        <ul>
+                            <li><a href="#">Lorem Ipsum</a></li>
+                            <li><a href="#">Simply dummy text</a></li>
+                            <li><a href="#">The printing and typesetting </a></li>
+                            <li><a href="#">Standard dummy text</a></li>
+                            <li><a href="#">Type specimen book</a></li>
+                        </ul>
+                    </div>
+                </div><!--- END COL -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="single_footer single_footer_address">
+                        <h4>Subscribe today</h4>
+                        <div class="signup_form">                           
+                            <form action="#" class="subscribe">
+                                <input type="text" class="subscribe__input" placeholder="Enter Email Address">
+                                <button type="button" class="subscribe__btn"><i class="fas fa-paper-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="social_profile">
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>                          
+                </div><!--- END COL -->         
+            </div><!--- END ROW --><br><hr>
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-xs-12">
+                    <p class="copyright">Copyright © 2024 Royal Agencies | Powered by <a href="https://imperiumofficial.vercel.app/">IMPERIUM</a></p>
+                    <p></p>
+                </div><!--- END COL -->                 
+            </div><!--- END ROW -->                 
+        </div><!--- END CONTAINER -->
+    </div>
+    <script src="/js/star-health-insurance.js"></script>
 </body>
 </html>

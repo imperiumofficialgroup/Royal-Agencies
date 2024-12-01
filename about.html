@@ -3,60 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="about.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <title>About Us - Royal Agencies</title>
 </head>
-<body>
-    <div class="header">
-        <img src="" alt="Royal Agencies Logo"> <!-- Add your logo here -->
+<!-- Navbar -->
+<header class="header">
+    <div class="container">
+        <a href="index.html" class="logo">Royal Agencies</a>
+        <input class="menu-btn" type="checkbox" id="menu-btn">
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
     </div>
-
-    <div class="navbar">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact Us</a>
-      
-    </div>
-
-    <div class="content">
-        <h2>About Us</h2>
-        <div class="service-page">
+</header>
+<body class="bg-[#ffff] text-gray-800 font-sans">
+    <section class="py-16 px-4">
+        <div class="max-w-7xl mx-auto space-y-10">
             
-            <h3>Our Values</h3>
-            <ul>
-                <li><strong>Integrity:</strong> We operate with honesty and transparency in all our interactions.</li>
-                <li><strong>Quality:</strong> We are committed to providing services that meet the highest standards.</li>
-                <li><strong>Customer Focus:</strong> Our clients are at the heart of everything we do.</li>
-                <li><strong>Innovation:</strong> We embrace change and continually seek better ways to serve our customers.</li>
-            </ul>
+            <!-- Section 1: Content Left, Image Right -->
+            <div class="flex flex-col lg:flex-row items-center gap-12" data-aos="fade-right" data-aos-duration="1000">
+                <div class="flex-1">
+                    <h2 class="text-3xl font-bold text-[#007bff] mb-4">Our Values</h2>
+                    <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                        We operate with honesty, transparency, and innovation to provide the highest quality service to our clients.
+                    </p>
+                    <ul class="space-y-4 text-gray-700">
+                        <li><strong class="text-[#007bff]">Integrity:</strong> Honest and transparent interactions.</li>
+                        <li><strong class="text-[#007bff]">Quality:</strong> Committed to excellence.</li>
+                        <li><strong class="text-[#007bff]">Customer Focus:</strong> Clients at the heart of everything.</li>
+                        <li><strong class="text-[#007bff]">Innovation:</strong> Embracing change for improvement.</li>
+                    </ul>
+                </div>
+                <div class="flex-1" data-aos="zoom-in" data-aos-duration="1000">
+                    <img src="image/values.jpg" alt="Our Values Illustration" class="rounded-lg">
+                </div>
+            </div>
 
-            <h3>Our Team</h3>
-            <p>Our team consists of highly skilled professionals dedicated to delivering exceptional service. With years of experience in their respective fields, our experts are trained to handle various tasks efficiently and effectively. We believe in continuous learning and development to stay ahead in the industry.</p>
+            <!-- Section 2: Image Left, Content Right -->
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-12" data-aos="fade-left" data-aos-duration="1000">
+                <div class="flex-1">
+                    <h2 class="text-3xl font-bold text-[#007bff] mb-4">Our Team</h2>
+                    <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                        Our skilled professionals deliver exceptional service and continuously strive to stay ahead in the industry.
+                    </p>
+                    <ul class="space-y-4 text-gray-700">
+                        <li>Experts with years of experience.</li>
+                        <li>Dedicated to client satisfaction.</li>
+                        <li>Committed to continuous learning and development.</li>
+                    </ul>
+                </div>
+                <div class="flex-1" data-aos="zoom-in" data-aos-duration="1000">
+                    <img src="image/team.jpg" alt="Our Team Illustration" class="rounded-lg">
+                </div>
+            </div>
 
-            <h3>What We Offer</h3>
-            <p>We specialize in a diverse range of services, including:</p>
-            <ul>
-                <li><strong>Water Filtration Systems:</strong> Offering a variety of domestic and industrial water filtration solutions.</li>
-                <li><strong>CCTV and Fire Safety:</strong> Providing installation and monitoring of CCTV systems and fire safety services.</li>
-                <li><strong>Rent Agreement Services:</strong> Streamlining the rental process for both renters and property owners.</li>
-                <li><strong>Insurance Services:</strong> Covering vehicle insurance for both domestic and commercial use, along with health insurance plans.</li>
-                <li><strong>Real Estate Solutions:</strong> Assisting clients with buying, selling, and renting properties.</li>
-            </ul>
+            <!-- Section 3: Content Left, Image Right -->
+            <div class="flex flex-col lg:flex-row items-center gap-12" data-aos="fade-up" data-aos-duration="1000">
+                <div class="flex-1">
+                    <h2 class="text-3xl font-bold text-[#007bff] mb-4">What We Offer</h2>
+                    <ul class="space-y-4 text-gray-700">
+                        <li><strong class="text-[#007bff]">Water Filtration:</strong> Domestic and industrial solutions.</li>
+                        <li><strong class="text-[#007bff]">CCTV and Fire Safety:</strong> Installation and monitoring.</li>
+                        <li><strong class="text-[#007bff]">Rent Agreements:</strong> Hassle-free rental process.</li>
+                        <li><strong class="text-[#007bff]">Insurance:</strong> Comprehensive vehicle and health plans.</li>
+                        <li><strong class="text-[#007bff]">Real Estate:</strong> Property buying, selling, and renting.</li>
+                    </ul>
+                </div>
+                <div class="flex-1" data-aos="zoom-in" data-aos-duration="1000">
+                    <img src="image/offer.jpg" alt="What We Offer Illustration" class="rounded-lg">
+                </div>
+            </div>
 
-            <h3>Why Choose Us?</h3>
-            <p>We pride ourselves on our customer-centric approach. Here’s why clients choose Royal Agencies:</p>
-            <ul>
-                <li>Extensive experience across multiple service areas.</li>
-                <li>Competitive pricing without compromising on quality.</li>
-                <li>Personalized services tailored to meet individual needs.</li>
-                <li>Strong emphasis on customer satisfaction and ongoing support.</li>
-            </ul>
+            <!-- Section 4: Image Left, Content Right -->
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-12" data-aos="fade-right" data-aos-duration="1000">
+                <div class="flex-1">
+                    <h2 class="text-3xl font-bold text-[#007bff] mb-4">Our Vision</h2>
+                    <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                        We aim to be industry leaders by consistently delivering innovative solutions that exceed client expectations.
+                    </p>
+                    <ul class="space-y-4 text-gray-700">
+                        <li>Empowering communities with reliable services.</li>
+                        <li>Building long-term relationships with clients.</li>
+                        <li>Adopting sustainable and ethical practices.</li>
+                    </ul>
+                </div>
+                <div class="flex-1" data-aos="zoom-in" data-aos-duration="1000">
+                    <img src="image/vision.jpg" alt="Our Vision Illustration" class="rounded-lg">
+                </div>
+            </div>
         </div>
-    </div>
-    <script src="about.js"></script>
+    </section>
 
+    <!-- Footer -->
     <div class="footer">
-        <p>&copy; 2024 Royal Agencies. All Rights Reserved.</p>
+        <div class="container">     
+            <div class="row">                       
+                <div class="col-lg-4 col-sm-4 col-xs-12">
+                    <div class="single_footer">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#">Lorem Ipsum</a></li>
+                            <li><a href="#">Simply dummy text</a></li>
+                            <li><a href="#">The printing and typesetting </a></li>
+                            <li><a href="#">Standard dummy text</a></li>
+                            <li><a href="#">Type specimen book</a></li>
+                        </ul>
+                    </div>
+                </div><!--- END COL --> 
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="single_footer single_footer_address">
+                        <h4>Page Link</h4>
+                        <ul>
+                            <li><a href="#">Lorem Ipsum</a></li>
+                            <li><a href="#">Simply dummy text</a></li>
+                            <li><a href="#">The printing and typesetting </a></li>
+                            <li><a href="#">Standard dummy text</a></li>
+                            <li><a href="#">Type specimen book</a></li>
+                        </ul>
+                    </div>
+                </div><!--- END COL -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="single_footer single_footer_address">
+                        <h4>Subscribe today</h4>
+                        <div class="signup_form">                           
+                            <form action="#" class="subscribe">
+                                <input type="text" class="subscribe__input" placeholder="Enter Email Address">
+                                <button type="button" class="subscribe__btn"><i class="fas fa-paper-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="social_profile">
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>                          
+                </div><!--- END COL -->         
+            </div><!--- END ROW --><br><hr>
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-xs-12">
+                    <p class="copyright">Copyright © 2024 Royal Agencies | Powered by <a href="https://imperiumofficial.vercel.app/">IMPERIUM</a></p>
+                    <p></p>
+                </div><!--- END COL -->                 
+            </div><!--- END ROW -->                 
+        </div><!--- END CONTAINER -->
     </div>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 120, // Offset from the element
+            duration: 1000, // Animation duration
+            easing: 'ease-in-out', // Easing function
+            once: true // Whether animation happens only once
+        });
+    </script>
 </body>
 </html>

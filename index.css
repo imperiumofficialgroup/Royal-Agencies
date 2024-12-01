@@ -9,19 +9,33 @@ body{
 a{
     text-decoration: none;
 }
+nav{
+    padding: 20px;
+    width: 100%;
+    margin-left: 175px;
+}
 header{
-    width: 1140px;
-    max-width: 80%;
+    width: 100%;
+    max-width: 100%;
     margin: auto;
     height: 50px;
     display: flex;
     align-items: center;
     position: relative;
     z-index: 100;
+    background-color: rgba(0,0,0,0.65);
 }
 header a{
     color: #eee;
-    margin-right: 40px;
+    padding: 5px 14px;
+    font-size: larger;
+    font-weight: 500;
+    text-shadow: 0 10px 20px #0009;
+    border-radius: 30px;  
+}
+header a:hover{
+    color: #f1683a;
+    background: rgba(255, 255, 255, 0.25);
 }
 /* carousel */
 .carousel{
@@ -37,14 +51,15 @@ header a{
     position: absolute;
     inset: 0 0 0 0;
 }
-.carousel .list .item img{
+
+.carousel .list .item video{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 .carousel .list .item .content{
     position: absolute;
-    top: 20%;
+    top: 25%;
     width: 1140px;
     max-width: 80%;
     left: 50%;
@@ -52,7 +67,7 @@ header a{
     padding-right: 30%;
     box-sizing: border-box;
     color: #fff;
-    text-shadow: 0 5px 10px #0004;
+    text-shadow: 0 10px 20px #0009;
 }
 .carousel .list .item .author{
     font-weight: bold;
@@ -98,7 +113,7 @@ header a{
 }
 .thumbnail .item{
     width: 150px;
-    height: 220px;
+    height: 150px;
     flex-shrink: 0;
     position: relative;
 }
@@ -124,8 +139,8 @@ header a{
 /* arrows */
 .arrows{
     position: absolute;
-    top: 80%;
-    right: 52%;
+    top: 60%;
+    right: 67%;
     z-index: 100;
     width: 300px;
     max-width: 30%;
@@ -134,15 +149,17 @@ header a{
     align-items: center;
 }
 .arrows button{
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
-    background-color: #eee4;
+    background-color: rgba(0,0,0,0.65);
+    box-shadow: #000;
     border: none;
     color: #fff;
     font-family: monospace;
     font-weight: bold;
     transition: .5s;
+    border: #fff solid 2px;
 }
 .arrows button:hover{
     background-color: #fff;
@@ -175,16 +192,16 @@ header a{
     }
 }
 .carousel .list .item:nth-child(1) .content .title{
-    animation-delay: 0.8s!important;
+    animation-delay: 0.6s!important;
 }
 .carousel .list .item:nth-child(1) .content .topic{
-    animation-delay: 1.0s!important;
+    animation-delay: 0.8s!important;
 }
 .carousel .list .item:nth-child(1) .content .des{
-    animation-delay: 1.2s!important;
+    animation-delay: 1s!important;
 }
 .carousel .list .item:nth-child(1) .content .buttons{
-    animation-delay: 1.4s!important;
+    animation-delay: 1.2s!important;
 }
 /* create animation when next click */
 .carousel.next .list .item:nth-child(1) img{
@@ -250,6 +267,14 @@ header a{
     to{width: 0}
 }
 
+#prev{
+    font-size: 1.3rem;
+}
+
+#next{
+    font-size: 1.3rem;
+}
+
 
 /* prev click */
 
@@ -298,11 +323,131 @@ header a{
         opacity: 0;
     }
 }
-@media screen and (max-width: 678px) {
+
+/* Loader Container */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Spinner Animation */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ccc;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    nav{
+        padding: 20px;
+        width: 100%;
+        margin-left: 50px;
+    }
+    header a{
+        font-size: 1.25rem;
+    }
+    .carousel .list .item .topic{
+        font-size: 4.5rem;
+    }
+    .carousel .list .item #topic{
+        font-size: 3rem;
+    }
+    .arrows{
+        position: absolute;
+        top: 80%;
+        right: 59%;
+        z-index: 100;
+        width: 300px;
+        max-width: 30%;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
     .carousel .list .item .content{
-        padding-right: 0;
+        padding-right: 10%;
+    }   
+    .carousel .list .item .content #water-filters{
+        font-size: 3.5rem;
+    }
+    .carousel .list .item .content #water-filter{
+        font-size: 3.7rem;
+    }
+    .carousel .list .item .content #water{
+        padding-right: 90px;
+    }
+    .thumbnail .item{
+        width: 250px;
+        height: 250px;
+        flex-shrink: 0;
+        position: relative;
+        right: 9.7%;
+    }
+}
+@media screen and (max-width: 678px) {
+    nav{
+        padding: 20px;
+        width: 100%;
+        margin-left: 10px;
+    }
+    header a{
+        font-size: 0.9rem;
+    }
+    .carousel .list .item .content{
+        padding-right: 0px;
     }
     .carousel .list .item .content .title{
         font-size: 30px;
     }
+    .carousel .list .item .content #water-filters{
+        font-size: 1.8rem;
+    }
+    .carousel .list .item .content #water-filter{
+        font-size: 2.4rem;
+    }
+    .carousel .list .item .content #water{
+        padding-right: 10px;
+    }
+    .thumbnail .item{
+        width: 130px;
+        height: 130px;
+        flex-shrink: 0;
+        position: relative;
+        right: 1%;
+    }
+    .arrows{
+        position: absolute;
+        top: 80%;
+        right: 56.5%;
+        z-index: 100;
+        width: 300px;
+        max-width: 30%;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    .carousel .list .item .topic{
+        font-size: 3.4rem;
+    }
 }
+
