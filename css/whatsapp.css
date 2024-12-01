@@ -1,0 +1,33 @@
+.fixed-image {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 1000; /* Ensures it stays on top */
+  }
+
+  .fixed-image img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px; /* Optional for rounded edges */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+  }
+
+  .fixed-image img:hover {
+    transform: scale(1.1); /* Slight zoom-in on hover */
+  }
+
+  /* Responsiveness for tablets */
+  @media (max-width: 768px) {
+    .fixed-image img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  /* Responsiveness for mobile */
+  @media (max-width: 480px) {
+    .fixed-image img {
+      width: 60px;
+      height: 60px;
+    }
+  }
