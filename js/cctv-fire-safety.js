@@ -10,3 +10,34 @@ function filterProducts() {
         }
     });
 }
+
+
+
+ // Get all the "Read More" buttons
+ const readMoreButtons = document.querySelectorAll('.read-more-button');
+ const closeButtons = document.querySelectorAll('.close');
+
+ // Open modal on button click
+ readMoreButtons.forEach(button => {
+     button.addEventListener('click', () => {
+         const modalId = button.getAttribute('data-modal');
+         const modal = document.getElementById(modalId);
+         modal.style.display = 'block';
+     });
+ });
+
+ // Close modal on close button click
+ closeButtons.forEach(button => {
+     button.addEventListener('click', () => {
+         const modalId = button.getAttribute('data-modal');
+         const modal = document.getElementById(modalId);
+         modal.style.display = 'none';
+     });
+ });
+
+ // Close modal when clicking outside the content
+ window.onclick = (event) => {
+     if (event.target.classList.contains('modal')) {
+         event.target.style.display = 'none';
+     }
+ };
