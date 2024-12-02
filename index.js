@@ -56,3 +56,10 @@ document.addEventListener("DOMContentLoaded", function () {
         loader.style.display = "none";
     });
 });
+
+
+document.querySelector('.dropdown-toggle').addEventListener('click', function (e) {
+    e.preventDefault(); // Prevent the default link behavior
+    const menu = this.nextElementSibling;
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+});
