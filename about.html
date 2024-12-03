@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/nav.css">
@@ -22,7 +22,7 @@
             <li><a href="contact.html">Contact us</a></li>
         </ul>
     </div>
-</header>
+</header><br>
 <body class="bg-[#ffff] text-gray-800 font-sans">
     <section class="py-16 px-4">
         <div class="max-w-7xl mx-auto space-y-10">
@@ -30,11 +30,12 @@
             <!-- Section 1: Content Left, Image Right -->
             <div class="flex flex-col lg:flex-row items-center gap-12" data-aos="fade-right" data-aos-duration="1000">
                 <div class="flex-1">
-                    <h2 class="text-3xl font-bold text-[#007bff] mb-4">Our Values</h2>
-                    <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                    <h2 class="text-[2.8rem] font-bold text-[#007bff] mb-4">Our Values</h2>
+                    
+                    <p class="text-gray-600 text-[1.3rem] mb-6 leading-relaxed">
                         We operate with honesty, transparency, and innovation to provide the highest quality service to our clients.
                     </p>
-                    <ul class="space-y-4 text-gray-700">
+                    <ul class="custom-list text-[1.1rem] space-y-4 text-gray-700">
                         <li><strong class="text-[#007bff]">Integrity:</strong> Honest and transparent interactions.</li>
                         <li><strong class="text-[#007bff]">Quality:</strong> Committed to excellence.</li>
                         <li><strong class="text-[#007bff]">Customer Focus:</strong> Clients at the heart of everything.</li>
@@ -42,18 +43,18 @@
                     </ul>
                 </div>
                 <div class="flex-1" data-aos="zoom-in" data-aos-duration="1000">
-                    <img src="image/values.jpg" alt="Our Values Illustration" class="rounded-lg">
+                    <img src="image/values.jpg" alt="Our Values Illustration" class="rounded-lg" >
                 </div>
             </div>
 
             <!-- Section 2: Image Left, Content Right -->
             <div class="flex flex-col lg:flex-row-reverse items-center gap-12" data-aos="fade-left" data-aos-duration="1000">
                 <div class="flex-1">
-                    <h2 class="text-3xl font-bold text-[#007bff] mb-4">Our Team</h2>
-                    <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                    <h2 class="text-[2.8rem] font-bold text-[#007bff] mb-4">Our Team</h2>
+                    <p class="text-gray-600 text-[1.3rem] mb-6 leading-relaxed">
                         Our skilled professionals deliver exceptional service and continuously strive to stay ahead in the industry.
                     </p>
-                    <ul class="space-y-4 text-gray-700">
+                    <ul class="custom-list text-[1.1rem] space-y-4 text-gray-700">
                         <li>Experts with years of experience.</li>
                         <li>Dedicated to client satisfaction.</li>
                         <li>Committed to continuous learning and development.</li>
@@ -67,8 +68,8 @@
             <!-- Section 3: Content Left, Image Right -->
             <div class="flex flex-col lg:flex-row items-center gap-12" data-aos="fade-up" data-aos-duration="1000">
                 <div class="flex-1">
-                    <h2 class="text-3xl font-bold text-[#007bff] mb-4">What We Offer</h2>
-                    <ul class="space-y-4 text-gray-700">
+                    <h2 class="text-[2.8rem] font-bold text-[#007bff] mb-4">What We Offer</h2>
+                    <ul class="custom-list text-[1.1rem] space-y-4 text-gray-700">
                         <li><strong class="text-[#007bff]">Water Filtration:</strong> Domestic and industrial solutions.</li>
                         <li><strong class="text-[#007bff]">CCTV and Fire Safety:</strong> Installation and monitoring.</li>
                         <li><strong class="text-[#007bff]">Rent Agreements:</strong> Hassle-free rental process.</li>
@@ -84,11 +85,11 @@
             <!-- Section 4: Image Left, Content Right -->
             <div class="flex flex-col lg:flex-row-reverse items-center gap-12" data-aos="fade-right" data-aos-duration="1000">
                 <div class="flex-1">
-                    <h2 class="text-3xl font-bold text-[#007bff] mb-4">Our Vision</h2>
-                    <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                    <h2 class="text-[2.8rem] font-bold text-[#007bff] mb-4">Our Vision</h2>
+                    <p class="text-gray-600 text-[1.3rem] mb-6 leading-relaxed">
                         We aim to be industry leaders by consistently delivering innovative solutions that exceed client expectations.
                     </p>
-                    <ul class="space-y-4 text-gray-700">
+                    <ul class="custom-list text-[1.1rem] space-y-4 text-gray-700">
                         <li>Empowering communities with reliable services.</li>
                         <li>Building long-term relationships with clients.</li>
                         <li>Adopting sustainable and ethical practices.</li>
@@ -157,6 +158,26 @@
             </div><!--- END ROW -->                 
         </div><!--- END CONTAINER -->
     </div>
+
+
+<style>
+    /* Target only specific lists with a class */
+    .custom-list li {
+        position: relative;
+        padding-left: 25px;
+    }
+
+    .custom-list li::before {
+        content: "\2713";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #007bff;
+        font-size: 18px;
+        line-height: 1.5;
+    }
+</style>
+
 
     <!-- AOS Script -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
