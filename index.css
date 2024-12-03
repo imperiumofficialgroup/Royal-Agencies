@@ -128,7 +128,7 @@ nav a:hover {
     }
 
     .dropdown:hover .dropdown-icon {
-        transform: rotate(450deg);
+        transform: rotate(90deg);
     }
 
     .dropdown .dropdown-menu {
