@@ -63,3 +63,11 @@ document.querySelector('.dropdown-toggle').addEventListener('click', function (e
     const menu = this.nextElementSibling;
     menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
 });
+// Get DOM elements
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+// Toggle navigation menu
+hamburger.addEventListener('click', function() {
+    navLinks.classList.toggle('active');
+});
