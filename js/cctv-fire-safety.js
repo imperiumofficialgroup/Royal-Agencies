@@ -41,3 +41,31 @@ function filterProducts() {
          event.target.style.display = 'none';
      }
  };
+
+
+ function filterProducts() {
+    const filterType = document.getElementById("filter-type").value.toLowerCase();
+    const productCards = document.querySelectorAll(".product-card");
+
+    productCards.forEach(card => {
+        if (filterType === "all" || card.getAttribute("data-type").toLowerCase() === filterType) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+
+function searchProducts() {
+    const searchInput = document.getElementById("search-input").value.toLowerCase();
+    const productCards = document.querySelectorAll(".product-card");
+
+    productCards.forEach(card => {
+        const title = card.querySelector("h2").textContent.toLowerCase();
+        if (title.includes(searchInput)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
